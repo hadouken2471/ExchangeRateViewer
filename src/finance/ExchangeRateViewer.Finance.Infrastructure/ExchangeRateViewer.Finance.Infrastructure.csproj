@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.25" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ExchangeRateViewer.Finance.Application\ExchangeRateViewer.Finance.Application.csproj" />
+        <ProjectReference Include="..\ExchangeRateViewer.Finance.Domain\ExchangeRateViewer.Finance.Domain.csproj" />
+        <ProjectReference Include="..\..\shared\ExchangeRateViewer.Shared.Cqrs\ExchangeRateViewer.Shared.Cqrs.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.7.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\shared\ExchangeRateViewer.Shared.Cqrs\ExchangeRateViewer.Shared.Cqrs.csproj" />
+      <ProjectReference Include="..\ExchangeRateViewer.Users.Domain\ExchangeRateViewer.Users.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

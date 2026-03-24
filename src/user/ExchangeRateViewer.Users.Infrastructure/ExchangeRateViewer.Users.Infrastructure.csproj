@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.14" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.25" />
+      <PackageReference Include="Npgsql" Version="8.0.9" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\shared\ExchangeRateViewer.Shared.Kernel\ExchangeRateViewer.Shared.Kernel.csproj" />
+      <ProjectReference Include="..\ExchangeRateViewer.Users.Application\ExchangeRateViewer.Users.Application.csproj" />
+      <ProjectReference Include="..\ExchangeRateViewer.Users.Domain\ExchangeRateViewer.Users.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

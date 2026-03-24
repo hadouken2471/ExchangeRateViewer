@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.14" />
+      <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.14" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+      <PackageReference Include="Scalar.AspNetCore" Version="1.2.5" />
+      <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\shared\ExchangeRateViewer.Shared.Cqrs\ExchangeRateViewer.Shared.Cqrs.csproj" />
+      <ProjectReference Include="..\ExchangeRateViewer.Users.Application\ExchangeRateViewer.Users.Application.csproj" />
+      <ProjectReference Include="..\ExchangeRateViewer.Users.Infrastructure\ExchangeRateViewer.Users.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

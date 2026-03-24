@@ -1,0 +1,109 @@
+root = true
+
+# All files
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# XML, JSON, YAML
+[*.{xml,csproj,json,yml,yaml}]
+indent_size = 2
+
+# C# files
+[*.cs]
+
+#### .NET Coding Conventions ####
+
+# Organize usings
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+
+# Unnecessary code
+dotnet_code_quality_unused_parameters = all:warning
+
+#### C# Coding Conventions ####
+
+# var preferences
+csharp_style_var_for_built_in_types = true:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = true:suggestion
+
+# Expression-bodied members
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_constructors = false:suggestion
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
+csharp_style_expression_bodied_lambdas = true:suggestion
+
+# Pattern matching
+csharp_style_pattern_matching_over_is_with_cast_check = true:warning
+csharp_style_pattern_matching_over_as_with_null_check = true:warning
+
+# Null checking
+csharp_style_throw_expression = true:suggestion
+csharp_style_conditional_delegate_call = true:suggestion
+
+# Code block preferences
+csharp_prefer_braces = true:warning
+
+# Namespace declarations
+csharp_style_namespace_declarations = file_scoped:warning
+
+# Using statements
+csharp_using_directive_placement = outside_namespace:warning
+
+#### C# Formatting Rules ####
+
+# New line preferences
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+
+# Indentation preferences
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+
+# Space preferences
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_parentheses = false
+
+#### Diagnostics ####
+
+# IDE0005: Remove unnecessary using directives
+dotnet_diagnostic.IDE0005.severity = warning
+
+# CS0168: Variable declared but never used
+dotnet_diagnostic.CS0168.severity = warning
+
+# CS0219: Variable assigned but never used
+dotnet_diagnostic.CS0219.severity = warning
+
+# CS8618: Non-nullable property must contain a non-null value (allow for EF Core)
+dotnet_diagnostic.CS8618.severity = suggestion
+
+# IDE0090: Simplify new expression
+dotnet_diagnostic.IDE0090.severity = suggestion
+
+# IDE0063: Use simple using statement
+dotnet_diagnostic.IDE0063.severity = suggestion
+
+# S3897: Entity base class implements custom equality by design
+dotnet_diagnostic.S3897.severity = none
+
+# S4035: Entity base class uses custom equality by design
+dotnet_diagnostic.S4035.severity = none
+
+# S3875: Entity operator== overload is intentional for DDD
+dotnet_diagnostic.S3875.severity = none
+
+# S3881: Test classes use simple IDisposable for cleanup
+dotnet_diagnostic.S3881.severity = none
